@@ -1,74 +1,130 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  font-family: "Roboto", sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to the top */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 1200px;
+  width: 90%;
+}
+
+.signup-container,
+.features-container {
+  width: 45%;
+  padding: 20px;
+  margin-top: 0; /* Ensure no extra margin is added */
 }
 
 .signup-container {
-  background: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  margin-top: 0; /* Reset top margin for signup container */
 }
 
-.signup-container h2 {
-  text-align: center;
+.features-container {
+  margin-top: 0; /* Reset top margin for features container */
+}
+
+.signup-container h2,
+.features-container h2 {
+  font-size: 24px;
+  color: #002147;
   margin-bottom: 20px;
+  border-bottom: 2px solid #002147;
+  padding-bottom: 10px;
 }
 
 .form-group {
   margin-bottom: 15px;
 }
 
-.form-group label {
+label {
   display: block;
   margin-bottom: 5px;
+  color: #555;
 }
 
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="password"],
-.form-group input[type="tel"] {
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper i {
+  position: absolute;
+  right: 13px;
+  color: #002147;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
   width: 100%;
-  padding: 8px;
+  padding: 10px 10px 10px 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   box-sizing: border-box;
 }
 
-.form-group label[for="buyer"],
-.form-group label[for="seller"] {
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+.btn {
   display: inline-block;
-  margin-right: 10px;
-}
-
-button {
-  width: 100%;
-  padding: 10px;
-  background-color: #5cb85c;
-  border: none;
+  padding: 10px 20px;
+  background-color: #002147;
   color: #fff;
-  font-size: 16px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background-color: #4cae4c;
+.btn:hover {
+  background-color: #001530;
 }
 
-.signup-container p {
-  text-align: center;
-  margin-top: 10px;
+.form-group p {
+  margin: 0;
 }
 
-.signup-container a {
-  color: #5cb85c;
+.form-group a {
+  color: #002147;
   text-decoration: none;
+  font-weight: bold;
 }
 
-.signup-container a:hover {
+.form-group a:hover {
   text-decoration: underline;
+}
+
+.features-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features-container li {
+  margin-bottom: 10px;
+  color: #002147;
+  padding: 10px;
+  background-color: #f0f2f5;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.features-container li:nth-child(odd) {
+  background-color: #e6e9ee;
 }

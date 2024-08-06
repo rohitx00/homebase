@@ -3,13 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us-Homebase</title>
+    <title>Contact Us - Homebase</title>
     <link rel="stylesheet" href="./assets/css/contact.css" />
     <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    />
   </head>
   <body>
     <div class="contact-container">
       <h2>Contact Us</h2>
+      <div class="contact-info">
+        <div class="info-item">
+          <i class="fas fa-phone-alt"></i>
+          <p><strong>Phone:</strong> +123 456 7890</p>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <p><strong>Email:</strong> info@example.com</p>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <p><strong>Address:</strong> Gunupur, 765022, India</p>
+        </div>
+        <div class="social-media">
+          <a href="https://facebook.com" target="_blank" class="social-icon"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://twitter.com" target="_blank" class="social-icon"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="https://instagram.com" target="_blank" class="social-icon"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </div>
       <form id="contact-form">
         <div class="form-group">
           <label for="name">Name</label>
@@ -31,6 +66,27 @@
           <button type="submit">Send Message</button>
         </div>
       </form>
+      <div
+        id="confirmation-message"
+        class="confirmation-message"
+        style="display: none"
+      >
+        <p>Thank you for your message! We will get back to you soon.</p>
+      </div>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3753.631014102929!2d84.1901737762951!3d19.18989436380416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a279c18d706e05d%3A0xf21b4e6b0148174!2sGunupur%2C%20Odisha%20765022%2C%20India!5e0!3m2!1sen!2sus!4v1689904370732!5m2!1sen!2sus"
+          width="100%"
+          height="250"
+          style="
+            border: 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          "
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
     </div>
   </body>
 </html>

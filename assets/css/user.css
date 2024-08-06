@@ -1,56 +1,95 @@
 body {
   background: #f5f5f5;
-  margin-top: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+h4.font-weight-bold {
+  color: #002147;
+  border-bottom: 2px solid #002147;
+  padding-bottom: 10px;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.card {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.card-body {
+  padding: 20px;
 }
 
 .ui-w-80 {
-  width: 80px !important;
-  height: auto;
+  width: 100px !important;
+  height: 100px !important;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #002147;
 }
 
 .btn-default {
-  border-color: rgba(24, 28, 33, 0.1);
-  background: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0.1);
+  background: #f0f4f8;
   color: #4e5155;
+  border-radius: 5px;
+  padding: 10px 20px;
 }
 
 label.btn {
-  margin-bottom: 0;
+  border: 1px solid #002147;
+  color: #002147;
+  background: #fff;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 14px;
 }
 
 .btn-outline-primary {
-  border-color: #26b4ff;
+  border-color: #002147;
   background: transparent;
-  color: #26b4ff;
+  color: #002147;
+  border-radius: 5px;
+  padding: 10px 20px;
 }
 
 .btn {
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .text-light {
-  color: #babbbc !important;
+  color: #6c757d !important;
 }
 
 .btn-facebook {
-  border-color: rgba(0, 0, 0, 0);
   background: #3b5998;
   color: #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
 }
 
 .btn-instagram {
-  border-color: rgba(0, 0, 0, 0);
-  background: #000;
+  background: #e4405f;
   color: #fff;
-}
-
-.card {
-  background-clip: padding-box;
-  box-shadow: 0 1px 4px rgba(24, 28, 33, 0.012);
+  border-radius: 5px;
+  padding: 10px 20px;
 }
 
 .row-bordered {
-  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 8px;
 }
 
 .account-settings-fileinput {
@@ -61,50 +100,99 @@ label.btn {
   opacity: 0;
 }
 
+.account-settings-links .list-group-item {
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  color: #002147;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
 .account-settings-links .list-group-item.active {
-  font-weight: bold !important;
+  background: #e0e8f0;
+  color: #002147;
+  font-weight: bold;
 }
 
-html:not(.dark-style) .account-settings-links .list-group-item.active {
-  background: transparent !important;
+.switcher {
+  display: flex;
+  align-items: center;
 }
 
-.account-settings-multiselect ~ .select2-container {
-  width: 100% !important;
+.switcher-input {
+  display: none;
 }
 
-.light-style .account-settings-links .list-group-item {
-  padding: 0.85rem 1.5rem;
-  border-color: rgba(24, 28, 33, 0.03) !important;
+.switcher-indicator {
+  position: relative;
+  width: 34px;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 10px;
+  margin-right: 10px;
 }
 
-.light-style .account-settings-links .list-group-item.active {
-  color: #4e5155 !important;
+.switcher-indicator::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.3s;
 }
 
-.material-style .account-settings-links .list-group-item {
-  padding: 0.85rem 1.5rem;
-  border-color: rgba(24, 28, 33, 0.03) !important;
+.switcher-input:checked + .switcher-indicator {
+  background-color: #002147;
 }
 
-.material-style .account-settings-links .list-group-item.active {
-  color: #4e5155 !important;
+.switcher-input:checked + .switcher-indicator::before {
+  transform: translateX(14px);
 }
 
-.dark-style .account-settings-links .list-group-item {
-  padding: 0.85rem 1.5rem;
-  border-color: rgba(255, 255, 255, 0.03) !important;
+.switcher-label {
+  font-size: 16px;
+  color: #333;
 }
 
-.dark-style .account-settings-links .list-group-item.active {
-  color: #fff !important;
+.custom-select {
+  border-radius: 5px;
+  border: 1px solid #ddd;
 }
 
-.light-style .account-settings-links .list-group-item.active {
-  color: #4e5155 !important;
+textarea.form-control {
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.light-style .account-settings-links .list-group-item {
-  padding: 0.85rem 1.5rem;
-  border-color: rgba(24, 28, 33, 0.03) !important;
+.alert-warning {
+  background-color: #fff3cd;
+  color: #856404;
+  border-color: #ffeeba;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.btn-primary {
+  background: #002147;
+  border-color: #002147;
+  padding: 10px 20px;
+}
+
+.btn-primary:hover {
+  background: #001530;
+  border-color: #001530;
+}
+
+.btn-default {
+  background: #f0f4f8;
+  border-color: #ddd;
+  padding: 10px 20px;
 }
