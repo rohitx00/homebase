@@ -474,6 +474,42 @@ a {
   font-weight: var(--fw-500);
 }
 
+/* Additional CSS for the search bar */
+.search-bar {
+  display: none; /* Hide the search bar by default */
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+.search-bar input {
+  width: 200px;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-bar .search-submit-btn {
+  background: #002147;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.search-bar .search-submit-btn ion-icon {
+  vertical-align: middle;
+}
+
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/

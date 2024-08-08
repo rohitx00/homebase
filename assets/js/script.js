@@ -1,12 +1,12 @@
-'use strict';
+"use strict";
 
 /**
  * element toggle function
  */
 
-const elemToggleFunc = function (elem) { elem.classList.toggle("active"); }
-
-
+const elemToggleFunc = function (elem) {
+  elem.classList.toggle("active");
+};
 
 /**
  * navbar toggle
@@ -24,7 +24,9 @@ const navElemArr = [overlay, navCloseBtn, navOpenBtn];
  * close navbar when click on any navbar link
  */
 
-for (let i = 0; i < navbarLinks.length; i++) { navElemArr.push(navbarLinks[i]); }
+for (let i = 0; i < navbarLinks.length; i++) {
+  navElemArr.push(navbarLinks[i]);
+}
 
 /**
  * addd event on all elements for toggling navbar
@@ -37,8 +39,6 @@ for (let i = 0; i < navElemArr.length; i++) {
   });
 }
 
-
-
 /**
  * header active state
  */
@@ -46,6 +46,17 @@ for (let i = 0; i < navElemArr.length; i++) {
 const header = document.querySelector("[data-header]");
 
 window.addEventListener("scroll", function () {
-  window.scrollY >= 400 ? header.classList.add("active")
+  window.scrollY >= 400
+    ? header.classList.add("active")
     : header.classList.remove("active");
-}); 
+});
+
+// search bar in the header section
+// JavaScript to toggle search bar visibility
+const searchBtn = document.getElementById("search-btn");
+const searchBar = document.getElementById("search-bar");
+
+searchBtn.addEventListener("click", () => {
+  searchBar.style.display =
+    searchBar.style.display === "flex" ? "none" : "flex";
+});

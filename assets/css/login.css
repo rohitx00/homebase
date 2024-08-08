@@ -61,18 +61,20 @@ label {
 
 .input-wrapper i {
   position: absolute;
-  right: 15px; /* Adjusted for better spacing */
+  left: 15px; /* Position the icon to the left */
   color: #002147;
+  font-size: 18px; /* Adjust icon size */
 }
 
 input[type="email"],
 input[type="password"] {
   width: 100%;
-  padding: 12px 45px 12px 45px; /* Ensure padding on both sides */
+  padding: 12px 12px 12px 45px; /* Ensure padding accommodates the icon */
   border: 1px solid #ddd;
   border-radius: 8px;
   box-sizing: border-box;
   transition: border-color 0.3s, box-shadow 0.3s;
+  font-size: 12px; /* Adjust font-size for better readability */
 }
 
 input[type="email"]:focus,
