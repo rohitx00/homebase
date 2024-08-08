@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Property listing Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/listing-from.css" />
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <section class="property-form-section">
+      <div class="container">
+        <p class="section-subtitle">Add Property</p>
+        <h2 class="h2 section-title">Property Details</h2>
+
+        <form
+          class="property-form"
+          action="#"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <div class="form-group">
+            <label for="property-title"
+              ><i class="fas fa-home"></i> Property Title</label
+            >
+            <input
+              type="text"
+              id="property-title"
+              name="property-title"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="price"><i class="fas fa-dollar-sign"></i> Price</label>
+            <input type="number" id="price" name="price" required />
+          </div>
+
+          <div class="form-group">
+            <label for="description"
+              ><i class="fas fa-align-left"></i> Description</label
+            >
+            <textarea
+              id="description"
+              name="description"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="location"
+              ><i class="fas fa-map-marker-alt"></i> Location</label
+            >
+            <input type="text" id="location" name="location" required />
+          </div>
+
+          <div class="form-group">
+            <label for="bedrooms"><i class="fas fa-bed"></i> Bedrooms</label>
+            <input type="number" id="bedrooms" name="bedrooms" required />
+          </div>
+
+          <div class="form-group">
+            <label for="bathrooms"><i class="fas fa-bath"></i> Bathrooms</label>
+            <input type="number" id="bathrooms" name="bathrooms" required />
+          </div>
+
+          <div class="form-group">
+            <label for="square-feet"
+              ><i class="fas fa-ruler-combined"></i> Square Feet</label
+            >
+            <input type="number" id="square-feet" name="square-feet" required />
+          </div>
+
+          <div class="form-group">
+            <label for="property-image"
+              ><i class="fas fa-image"></i> Property Image</label
+            >
+            <input
+              type="file"
+              id="property-image"
+              name="property-image"
+              accept="image/*"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="seller-name"
+              ><i class="fas fa-user"></i> Seller Name</label
+            >
+            <input type="text" id="seller-name" name="seller-name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="seller-contact"
+              ><i class="fas fa-phone-alt"></i> Seller Contact</label
+            >
+            <input
+              type="text"
+              id="seller-contact"
+              name="seller-contact"
+              required
+            />
+          </div>
+
+          <button type="submit" class="submit-btn">
+            <i class="fas fa-paper-plane"></i> Submit
+          </button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

@@ -44,7 +44,6 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  /* align-items: center; Center elements within form group */
 }
 
 label {
@@ -62,14 +61,14 @@ label {
 
 .input-wrapper i {
   position: absolute;
-  right: 13px;
+  right: 15px; /* Adjusted for better spacing */
   color: #002147;
 }
 
 input[type="email"],
 input[type="password"] {
   width: 100%;
-  padding: 12px 12px 12px 45px;
+  padding: 12px 45px 12px 45px; /* Ensure padding on both sides */
   border: 1px solid #ddd;
   border-radius: 8px;
   box-sizing: border-box;

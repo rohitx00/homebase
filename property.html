@@ -5,125 +5,153 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Property</title>
     <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/property.css" />
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
   </head>
   <body>
     <section class="property">
-        <div class="container">
-            <p class="section-subtitle">Properties</p>
-            <h2 class="h2 section-title">Featured listing</h2>
+      <div class="container">
+        <p class="section-subtitle">Properties</p>
+        <h2 class="section-title">Featured listing</h2>
 
-            <li>
-                <div class="property-card">
-                  <figure class="card-banner">
-                    <a href="#">
-                      <img
-                        src="./assets/images/property-4.png"
-                        alt="Luxury villa in Rego Park"
-                        class="w-100"
-                      />
-                    </a>
+        <ul>
+          <li>
+            <div class="property-card">
+              <figure class="card-banner">
+                <a href="#">
+                  <img
+                    src="./assets/images/property-4.png"
+                    alt="Luxury villa in Rego Park"
+                    class="w-100"
+                  />
+                </a>
 
-                    <div class="card-badge green">For Rent</div>
+                <div class="card-badge">For Rent</div>
 
-                    <div class="banner-actions">
-                      <button class="banner-actions-btn">
-                        <ion-icon name="location"></ion-icon>
+                <div class="banner-actions">
+                  <button class="banner-actions-btn">
+                    <ion-icon name="location"></ion-icon>
+                    <address>Belmont Gardens, Chicago</address>
+                  </button>
 
-                        <address>Belmont Gardens, Chicago</address>
-                      </button>
+                  <button class="banner-actions-btn">
+                    <ion-icon name="camera"></ion-icon>
+                    <span>4</span>
+                  </button>
 
-                      <button class="banner-actions-btn">
-                        <ion-icon name="camera"></ion-icon>
+                  <button class="banner-actions-btn">
+                    <ion-icon name="film"></ion-icon>
+                    <span>2</span>
+                  </button>
+                </div>
+              </figure>
 
-                        <span>4</span>
-                      </button>
+              <div class="card-content">
+                <div class="card-price"><strong>$34,900</strong>/Month</div>
 
-                      <button class="banner-actions-btn">
-                        <ion-icon name="film"></ion-icon>
+                <h3 class="card-title">
+                  <a href="#">Luxury villa in Rego Park</a>
+                </h3>
 
-                        <span>2</span>
-                      </button>
-                    </div>
+                <p class="card-text">
+                  Beautiful Huge 1 Family House In Heart Of Westbury. Newly
+                  Renovated With New Wood
+                </p>
+
+                <ul class="card-list">
+                  <li class="card-item">
+                    <strong>3</strong>
+                    <ion-icon name="bed-outline"></ion-icon>
+                    <span>Bedrooms</span>
+                  </li>
+                  <li class="card-item">
+                    <strong>2</strong>
+                    <ion-icon name="man-outline"></ion-icon>
+                    <span>Bathrooms</span>
+                  </li>
+                  <li class="card-item">
+                    <strong>3450</strong>
+                    <ion-icon name="square-outline"></ion-icon>
+                    <span>Square Ft</span>
+                  </li>
+                </ul>
+                <button
+                  class="view-property-btn"
+                  onclick="showPropertyDetails()"
+                >
+                  View Property
+                </button>
+              </div>
+
+              <div class="card-footer">
+                <div class="card-author">
+                  <figure class="author-avatar">
+                    <img
+                      src="./assets/images/author.jpg"
+                      alt="William Seklo"
+                      class="w-100"
+                    />
                   </figure>
 
-                  <div class="card-content">
-                    <div class="card-price"><strong>$34,900</strong>/Month</div>
-
-                    <h3 class="h3 card-title">
-                      <a href="#">Luxury villa in Rego Park</a>
-                    </h3>
-
-                    <p class="card-text">
-                      Beautiful Huge 1 Family House In Heart Of Westbury. Newly
-                      Renovated With New Wood
+                  <div>
+                    <p class="author-name">
+                      <a href="#">Seller Nmae</a>
                     </p>
 
-                    <ul class="card-list">
-                      <li class="card-item">
-                        <strong>3</strong>
-
-                        <ion-icon name="bed-outline"></ion-icon>
-
-                        <span>Bedrooms</span>
-                      </li>
-
-                      <li class="card-item">
-                        <strong>2</strong>
-
-                        <ion-icon name="man-outline"></ion-icon>
-
-                        <span>Bathrooms</span>
-                      </li>
-
-                      <li class="card-item">
-                        <strong>3450</strong>
-
-                        <ion-icon name="square-outline"></ion-icon>
-
-                        <span>Square Ft</span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="card-footer">
-                    <div class="card-author">
-                      <figure class="author-avatar">
-                        <img
-                          src="./assets/images/author.jpg"
-                          alt="William Seklo"
-                          class="w-100"
-                        />
-                      </figure>
-
-                      <div>
-                        <p class="author-name">
-                          <a href="#">William Seklo</a>
-                        </p>
-
-                        <p class="author-title">Estate Agents</p>
-                      </div>
-                    </div>
-
-                    <div class="card-footer-actions">
-                      <button class="card-footer-actions-btn">
-                        <ion-icon name="resize-outline"></ion-icon>
-                      </button>
-
-                      <button class="card-footer-actions-btn">
-                        <ion-icon name="heart-outline"></ion-icon>
-                      </button>
-
-                      <button class="card-footer-actions-btn">
-                        <ion-icon name="add-circle-outline"></ion-icon>
-                      </button>
-                    </div>
+                    <p class="author-contact">
+                      <a href="tel:+919798511430">9798511430</a>
+                    </p>
                   </div>
                 </div>
-              </li>
-            </ul>
-          </div>
-        </div>
+
+                <div class="card-footer-actions">
+                  <button class="card-footer-actions-btn">
+                    <ion-icon name="resize-outline"></ion-icon>
+                  </button>
+
+                  <button class="card-footer-actions-btn">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </button>
+
+                  <button class="card-footer-actions-btn">
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </section>
+    <!-- The Modal -->
+    <div id="propertyModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" onclick="closePropertyDetails()">&times;</span>
+        <img
+          id="modal-property-image"
+          src="./assets/images/property-4.png"
+          alt="Property Image"
+          style="
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            margin-bottom: 20px;
+          "
+        />
+        <h2>Luxury villa in Rego Park</h2>
+        <p><strong>Location:</strong> Belmont Gardens, Chicago</p>
+        <p><strong>Price:</strong> $34,900/Month</p>
+        <p>
+          <strong>Description:</strong> Beautiful Huge 1 Family House In Heart
+          Of Westbury. Newly Renovated With New Wood
+        </p>
+        <p><strong>Bedrooms:</strong> 3</p>
+        <p><strong>Bathrooms:</strong> 2</p>
+        <p><strong>Square Ft:</strong> 3450</p>
+      </div>
+    </div>
+
+    <script src="./assets/js/view_property_details.js"></script>
   </body>
 </html>
